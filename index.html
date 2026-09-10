@@ -1,1 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coastal Collective Distinction - Brand & Positioning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Georgia', 'Garamond', serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .header-left h1 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.3rem;
+        }
+
+        .header-left p {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            letter-spacing: 0.05em;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 0.9rem;
+        }
+
+        .header-right p {
+            margin: 0.3rem 0;
+        }
+
+        .header-right a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        .header-right a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
+            color: white;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            min-height: 500px;
+        }
+
+        .hero-left {
+            padding-right: 2rem;
+        }
+
+        .badge {
+            background: #d4af37;
+            color: #1a3a52;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            margin-bottom: 2rem;
+        }
+
+        .hero-left h2 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            word-spacing: 100vw;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-left h2 .gold {
+            color: #d4af37;
+        }
+
+        .hero-left p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-right {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-right h3 {
+            font-size: 1.8rem;
+            color: #1a3a52;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .hero-right p {
+            color: #888;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .cta-content {
+            margin-bottom: 2rem;
+        }
+
+        .cta-content p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            background: #1a3a52;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            transition: background 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            background: #0f2635;
+            transform: translateY(-2px);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 4rem 2rem;
+            background: #f8f8f8;
+        }
+
+        .info-section h3 {
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .info-section h2 {
+            font-size: 2.2rem;
+            color: #1a3a52;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-section p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+        }
+
+        .feature h4 {
+            color: #1a3a52;
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Footer Section */
+        .cta-final {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-final p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .cta-final-button {
+            background: #d4af37;
+            color: #1a3a52;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .cta-final-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-final-button:active {
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f2635;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+            }
+
+            .hero-left {
+                padding-right: 0;
+            }
+
+            .hero-left h2 {
+                font-size: 2rem;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .header-right {
+                text-align: left;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <h1>ANDREW CHRISTIE - THE COASTAL COLLECTIVE</h1>
+            <p>Atlantic Sotheby's International Realty</p>
+        </div>
+        <div class="header-right">
+            <p><a href="tel:+17572699746">757-269-9746</a></p>
+            <p><a href="mailto:andrew.christie@atlanticsir.com">andrew.christie@atlanticsir.com</a></p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <span class="badge">THE COASTAL COLLECTIVE</span>
+            <h2>The Art of<br><span class="gold">Inspired Living</span></h2>
+            <p>Discover what truly sets us apart. Our comprehensive brand guide reveals the philosophy, positioning, and promise that define The Coastal Collective and Atlantic Sotheby's International Realty.</p>
+            <p style="font-size: 0.95rem; opacity: 0.85; margin-top: 2rem;">
+                Curated for agents, partners, and those who value distinction.
+            </p>
+        </div>
+        <div class="hero-right">
+            <h3>The Distinction Guide</h3>
+            <p>Our premium brand positioning document</p>
+            <div class="cta-content">
+                <p>An elegant, comprehensive exploration of our brand philosophy, market positioning, core values, and the distinguished approach that defines us in the Hampton Roads luxury market.</p>
+                <button class="cta-button" onclick="window.open('https://github.com/andrewchristie1-star/coastal-collective-distinction/releases/download/v1.0/ASIR_The.Distinction.Guide_2026_Andrew.Christie.pdf', '_blank')">Download Guide →</button>
+            </div>
+            <p style="font-size: 0.85rem; margin-top: 1.5rem; color: #aaa;">
+                Premium PDF • Ready to share • Instant download
+            </p>
+        </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section class="info-section">
+        <h3>Inside the Distinction Guide</h3>
+        <h2>A Legacy of Excellence</h2>
+        <p>This curated brand guide articulates who we are, what we stand for, and how we deliver uncompromising value to discerning clients and partners. Every detail is intentional—from our global positioning to our local market expertise.</p>
+
+        <div class="features">
+            <div class="feature">
+                <h4>Our Philosophy</h4>
+                <p>The guiding principles and core values that define The Coastal Collective and our commitment to excellence</p>
+            </div>
+            <div class="feature">
+                <h4>Market Distinction</h4>
+                <p>How we differentiate in the luxury coastal markets of Hampton Roads and beyond</p>
+            </div>
+            <div class="feature">
+                <h4>Visual Language</h4>
+                <p>Sophisticated design standards including logo usage, color palette, and typography</p>
+            </div>
+            <div class="feature">
+                <h4>Brand Voice</h4>
+                <p>Our distinct communication style that reflects our premium market positioning</p>
+            </div>
+            <div class="feature">
+                <h4>Client Promise</h4>
+                <p>The elevated experience and exceptional service clients expect from us</p>
+            </div>
+            <div class="feature">
+                <h4>Global Network</h4>
+                <p>Our connection to Atlantic Sotheby's International Realty and access to global opportunities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final">
+        <h2>Discover Our Distinction</h2>
+        <p>Access the complete brand guide and experience what sets us apart in the luxury real estate market</p>
+        <button class="cta-final-button" onclick="window.open('https://github.com/andrewchristie1-star/coastal-collective-distinction/releases/download/v1.0/ASIR_The.Distinction.Guide_2026_Andrew.Christie.pdf', '_blank')">Download the Guide →</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Andrew Christie · License ID: 0225199734 · The Coastal Collective at Atlantic Sotheby's International Realty</p>
+        <p style="margin-top: 1rem;">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+</body>
+</html>
